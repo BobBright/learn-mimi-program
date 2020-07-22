@@ -3,3 +3,4 @@
 <view>Hello {{name}}</view>
 <view>My age {{age}}</view>
 
+<view>02-知识点</view>
