@@ -1,0 +1,10 @@
+<!--miniprogram/pages/category/category.wxml-->
+<text>miniprogram/pages/category/category.wxml</text>
+<view>{{message}}</view>
+
+<!-- json对象的查询 -->
+<view>id = {{id}}</view>
+<button bindtap="handleBtnClink">按钮</button>
+<view wx:for="{{goodsList}}">{{item.goodsId}}--{{item.goodsName}}--{{item.goodsPrice}}元</view>
+
+

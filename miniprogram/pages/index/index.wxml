@@ -3,4 +3,16 @@
 <view>Hello {{name}}</view>
 <view>My age {{age}}</view>
 
-<view>02-知识点</view>
+<!--2.列表展示-->
+<view wx:key="{{students}}">{{item.name}}-{{item.age}}</view>
+
+<!--3.事件监听改变data -->
+<view>当前计数{{count}}</view>
+<button bindtap="handleBtnClick">+</button>
+<button bindtap="handleBtnClick2">-</button>
+
+<!-- 4.获取用户信息 第二种获取用户信息-->
+<button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" >用户授权</button>
+
+<!-- 5.获取用户信息 第三种获取用户信息 开放能力 -->
+<open-data type="userNickName"></open-data>
