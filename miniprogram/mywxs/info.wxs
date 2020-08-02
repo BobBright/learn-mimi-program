@@ -1,0 +1,17 @@
+var msg = "hello world";
+var name = "moccy";
+var sum = function(v1,v2){
+  return v1+v2;
+};
+
+function showInfo(){
+    return "你好";
+}
+
+//commonjs 模块化导出的写法
+module.exports = {
+  msg:msg,
+  name:name,
+  sum:sum,
+  showInfo:showInfo
+}

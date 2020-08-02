@@ -1,0 +1,21 @@
+<!-- 1.设置样式的三种方式 -->
+<!-- 1.1.行内样式（内联样式） -->
+<view style="mragin-top:5px; text-align:center; color:red; font-size:32px; border:2px green solid;">
+刘备</view>
+<!-- 1.2.页内样式 -->
+<view class="content">关羽</view>
+<!-- 1.2.全局样式 -->
+<view class="box">张飞</view>
+
+<!-- 2.三种样式作用于同一个标签 优先级：内联样式>页内样式>全局样式 -->
+<view style="background:gray; color:yellow;" class="content box">赵云</view>
+
+<!-- 3. !important 在页内name选择器中的color样式增加了 !important -->
+<view style="background:yellow;" class="name">黄忠</view>
+
+<!-- 4.WXCC尺寸单位：rpx 2prx=1px-->
+<view class="box1"></view>
+<view class="box2"></view>
+
+<!-- 5.导入样式 -->
+<view class="hero">曹操</view>

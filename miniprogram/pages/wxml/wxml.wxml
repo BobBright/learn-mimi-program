@@ -1,0 +1,96 @@
+<!--pages/wxml/wxml.wxml-->
+<include src="/wxml/header.wxml" />
+
+<!-- 1.wxml格式，必须要闭合，区分大小写 -->
+<view>闭合的</view>
+<view class="" Class="">大小写敏感</view>
+
+<!-- Mustache语法 -->
+<view>{{msg}}</view>
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName +' '+lastName}}</view>
+
+<view>{{age>18?'成年人':'未成年人'}}</view>
+<view>{{nowTime}}</view>
+
+<button size='mini'
+bindtap="handleSwitchColor">切换颜色</button>
+<view class="box {{isActive? 'isActive' : ''}}">夏侯惇</view>
+
+<view>---------条件判断--------------</view>
+<button size="mini" bindtap="handleSwitchShow">切换显示</button>
+<view wx:if="{{isShow}}">荀彧</view>
+
+<button size="mini" bindtap="handleIncrement">修改分数</button>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:elif="{{score>=60}}">及格</view>
+<view wx:else="{{score}}">不及格</view>
+
+<view>---------hidden 属性--------------</view>
+<!-- 
+hidden和wx:if的区别：
+1.hidden将组件隐藏起来，组件依然存在（display：none）
+2.wx:if 将组件隐藏起来，根本不会创建该组件
+
+选择：
+1.如果组件在显示和隐藏键切换非常频繁，建议使用hidden
+2.反之，使用wx:if
+ -->
+
+<view hidden>hidden控制的组件</view>
+<view wx:if="{{false}}">wx:if控制的组件</view>
+
+
+<view>--------列表渲染-------------</view>
+<!-- 1.wx:for 遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['郭嘉','荀彧','程昱','许攸']}}">{{item}}-{{index}}</view>
+<view wx:for="{{'abcdefg'}}">{{item}}</view>
+<view wx:for="{{5}}">{{item}}</view> -->
+
+
+<view>--------block 元素-------------</view>
+<!-- <block wx:if="{{isShow}}">
+<button>按钮</button>
+<view>孙坚</view>
+<view>孙策</view>
+<view>孙权</view>
+</block>
+
+<block wx:for="{{3}}">
+<view>大乔</view>
+<view>小乔</view>
+<view>貂蝉</view>
+</block> -->
+
+<!-- <view>--------item index 属性-------------</view>
+<view wx:for="{{['吕布','张辽','张顺']}}" wx:for-item="name" wx:for-index="i">
+{{name}}-{{i}}
+</view> -->
+
+
+<view>--------wx:for-key={{xxx}}  注意这个key中的值必须是唯一的------------</view>
+<view>--------item index 属性-------------</view>
+<view wx:for="{{['吕布','张辽','张顺']}}" wx:for-item="name" wx:for-index="i" wx:key="name">
+{{name}}-{{i}}
+</view>
+
+
+<view>--------Template ------------</view>
+<!-- 1.在没有自定义组件之前，为了进行代码复用，使用template
+     2.在template没有使用之前，template是不会被渲染的
+ -->
+<!-- <template name="contentTemplate">
+  <button size="mini">{{btnText}}</button>
+  <view>{{msg}}</view>
+</template> -->
+
+<import src="/wxml/template.wxml" />
+
+<template is="contentTemplate" data="{{btnText:'警告',msg:'诸葛亮'}}"/>
+
+<include src="/wxml/footer.wxml" />
+
+
+
+

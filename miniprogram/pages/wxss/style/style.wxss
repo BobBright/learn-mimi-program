@@ -1,0 +1,23 @@
+.hero{
+  /*背景*/
+  background-color: gray;
+  /*文本*/
+  text-align: center;
+  color: white;
+  /*字体*/
+  font-size: 64rpx;
+  font-style: solid;
+  /* 链接、列表、表格 */
+  /* 轮廓 */
+  border: 2rpx dashed yellow;
+
+  /*框模型*/
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 定位 */
+
+}
