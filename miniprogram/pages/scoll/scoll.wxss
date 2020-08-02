@@ -1,0 +1,28 @@
+/* pages/scoll/scoll.wxss */
+.container1{
+  background-color: purple;
+  height: 50px;
+  white-space: nowrap;
+}
+.item1{
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color:yellow;
+  height: 30px;
+  width: 50px;
+  display: inline-block;
+}
+.container2{
+  margin-top: 50px;
+  background-color: orange;
+  height: 200px;
+  white-space: nowrap;
+}
+
+.item2{
+  margin-top: 20px;
+  background-color: green;
+  height: 100px;
+}
+
+

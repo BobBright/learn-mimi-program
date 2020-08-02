@@ -1,0 +1,17 @@
+<!--pages/button/button.wxml-->
+<!-- 1.button的基本使用 不是行内元素-->
+<button>登陆</button>
+<button>注册</button>
+
+<!-- 2.size 属性 注意：mini行内不居中-->
+<button size="default">按钮-default</button>
+<button size="mini">按钮-mimi</button>
+
+<!-- 3.type属性 -->
+<button type="primary">按钮</button>
+<button type="default">按钮</button>
+<button type="warn">按钮</button>
+
+<!-- 4.form-type的合法值 -->
+<button form-type="submit">提交</button>
+<button form-type="reset">重置</button>

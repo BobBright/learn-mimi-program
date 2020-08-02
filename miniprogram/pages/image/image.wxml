@@ -1,0 +1,26 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image 可以写成单标签也可以写成双标签 -->
+<!-- 2.image 默认大小是320*240 -->
+<!-- 3.image是一个行内块元素（inline-block） -->
+
+<!-- 图片路径 1.相对路径 2.绝对路径 3.远程地址 -->
+<image src="/assets/test/timg.jpg"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<view>haha</view>
+
+<!-- 相册中的图片 -->
+<button bindtap="handleChooseAlbum">选择相册</button>
+<image src="{{imagePath}}"></image> 
+
+<!-- bindload:监听图片加载 -->
+<!-- 图片懒加载 -->
+<image wx:for="{{10}}"
+ src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" 
+ bindload="handleImageLoad"
+ lazy-load></image>
+
+ <!-- show-menu-by-longpress -->
+ <image wx:for="{{1}}"
+ src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" 
+ bindload="handleImageLoad"
+ show-menu-by-longpress></image>

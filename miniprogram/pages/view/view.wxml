@@ -1,0 +1,18 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view 块 -->
+<view>哈哈哈</view>
+
+<!-- 2.hover-class hover-stay-time-->
+<view class="box1" hover-class="hover-view" hover-stay-time="{{0}}">中国人</view>
+
+<!-- 3.hover-start-time -->
+
+<view class="box2" hover-class="hover-view" hover-start-time="{{100}}">中国人</view>
+
+<!-- 4.hover-stop-propagation -->
+<view class="box3" hover-class="hover-view2">
+<view  class="box4"  hover-class="hover-view"
+ hover-start-time="{{100}}" 
+ hover-stop-propagation="false">
+2345345</view>
+</view>

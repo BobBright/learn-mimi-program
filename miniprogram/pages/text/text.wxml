@@ -1,0 +1,21 @@
+<!--pages/text/text.wxml-->
+<!-- 1.text 的基本使用 -->
+<text>Hello World\n</text>
+
+<!-- 2.text 属性，是否可以选中 ,三种写法-->
+<text selectable="{{true}}">Hello World\n</text>
+<text selectable="true">Hello World\n</text>
+<text selectable>Hello World\n</text>
+
+<!-- 3.text 空格尺寸 ensp 半个中文空格尺寸 emsp 一个中文空格尺寸 -->
+<text>Hello World\n</text>
+<text space="nbsp">Hello World\n</text>
+<text space="ensp">Hello World\n</text>
+<text space="emsp">Hello World\n</text>
+
+<!-- 4.解码 -->
+<text decode="{{true}}">8 &gt; 3\n</text>
+<text decode="true">8 &gt; 3\n</text>
+<text decode>8 &gt; 3\n</text>
+
+

@@ -1,0 +1,24 @@
+<!-- 1.input 基本使用 -->
+<input></input>
+
+<!-- 2.value -->
+<input value="haha"></input>
+
+<!-- 3.键盘类型 数字、字母、身份证、带小数点 -->
+<input type="number"></input>
+
+<!-- 4.password -->
+<input password></input>
+
+<!-- 5.placeholder -->
+<input placeholder="请输入电话号码"></input>
+
+<!-- 6.maxlength -->
+<input maxlength="6"></input>
+
+<!-- 7.confirm type -->
+
+<!-- 8.input 绑定事件 -->
+<input  bindinput="handleInput"
+        bindfocus="handleFocus"
+        bindblur="handleBlur"></input>

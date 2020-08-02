@@ -1,0 +1,13 @@
+<!--pages/wxss/wxss.wxml-->
+<button bindtap="handlebtn">切换颜色</button>
+<view class='box {{isActive?"active":""}}'>哈哈啊</view>
+
+<import src="/pages/wxss/template.wxml"/>
+
+<template is="contentItem" data="{{btnName:'警告',viewName:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnName:'警告',viewName:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnName:'警告',viewName:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnName:'警告',viewName:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnName:'警告',viewName:'哈哈'}}"></template>
+
+
