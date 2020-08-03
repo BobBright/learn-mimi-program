@@ -1,5 +1,32 @@
 <!--index.wxml-->
-<!--1.小程序的数据绑定-->
-<view>Hello {{name}}</view>
-<view>My age {{age}}</view>
+<!-- 1.事件的回顾 -->
+<button bindtap="handleBtnClick" size="mini">按钮</button>
+<button bind:tap="handleBtnClick" size="mini">按钮</button>
+<button catch:tap="handleBtnClick" size="mini">按钮</button>
 
+<!-- 2.基本事件 -->
+<view class="box" bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchEnd" bind:tap="handleTap" bind:longpress="handleLongPress"></view>
+
+<!-- 3.currentTarget和target的区别 -->
+<view id="outter" class="outter" bind:tap="handleOutterClick">外部容器
+	<view id="inner" class="inner" bind:tap="handleInnerClick">
+		内部容器
+	</view>
+</view>
+
+<!-- 4.事件传递参数 -->
+<view class="container1">
+	<block wx:for="{{titles}}" wx:key="index">
+		<view class="title1" bind:tap="handleItemClick" data-index="{{index}}" data-item="{{item}}">
+			{{item}}
+		</view>
+	</block>
+</view>
+
+
+<!-- 4.事件冒泡和事件捕获 -->
+<view class="view1" capture-catch:tap="handleCaptureTap1" bind:tap="handleTap1">
+	<view class="view2" capture-bind:tap="handleCaptureTap2" bind:tap="handleTap2">
+		<view class="view3" capture-bind:tap="handleCaptureTap3" bind:tap="handleTap3"></view>
+	</view>
+</view>
