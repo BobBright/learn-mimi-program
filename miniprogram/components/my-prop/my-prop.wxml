@@ -1,0 +1,3 @@
+<!--components/my-prop/my-prop.wxml-->
+<view class="title exttitle">{{title}}</view>
+<view class="content extcontent">{{content}}</view>

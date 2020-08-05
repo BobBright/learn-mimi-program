@@ -1,0 +1,3 @@
+<!--components/style-cpn/style-cpn.wxml-->
+<view class="title">1234</view>
+<view class="content">内容</view>

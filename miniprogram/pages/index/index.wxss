@@ -19,3 +19,10 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.title{
+  color: orange;
+}
+.content{
+  color: red;
+}

@@ -1,5 +1,39 @@
 <!--index.wxml-->
 <!--1.小程序的数据绑定-->
-<view>Hello {{name}}</view>
+<view class="title">Hello {{name}}</view>
 <view>My age {{age}}</view>
+<my-cpn></my-cpn>
+<!-- <style-cpn></style-cpn> -->
+
+<!-- 1.传递数据/传递样式 -->
+<!-- <my-prop title="蜀国" content="刘备的地盘" exttitle="title" extcontent="content"></my-prop>
+<my-prop title="魏国" content="曹操的地盘" exttitle="title" extcontent="content"></my-prop>
+<my-prop title="吴国" content="孙权的地盘" exttitle="title" extcontent="content"></my-prop> -->
+<!-- 
+<view>{{counter}}</view>
+<my-event bind:outterHandleIncrement="outterHandleIncrement"></my-event> -->
+
+<!-- 2 底部tab control 练习-->
+<!-- <tab-control titles="{{['时尚','新款','精选']}}"
+            bind:itemClick="handleTabClick"
+></tab-control> -->
+
+<!-- 3.页面调用组件的数据或者方法 -->
+<!-- <button bind:tap="handleClick" >按钮</button>
+<my-sel id="sel-id"></my-sel> -->
+
+<!-- 4.插槽 -->
+<!-- 4.1.单个插槽 -->
+<my-slot>
+  <button size="mini">按钮</button>
+</my-slot>
+
+<!-- 4.2.多个插槽 -->
+<!-- 1.创建插槽的组件；2.选项中加上multiplySlots:true；3.slot组件中加上name属性；4.引入组件，给每个slot加上name的值。 -->
+<my-mslot>
+<button slot="slot1">我是按钮1</button>
+<button slot="slot2">我是按钮2</button>
+<button slot="slot3">我是按钮3</button>
+</my-mslot>
+
 
