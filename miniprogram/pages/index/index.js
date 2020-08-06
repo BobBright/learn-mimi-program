@@ -1,4 +1,6 @@
 "use strict";
+import request from '../../service/request.js'
+
 var app = getApp();
 Page({
     data: {
@@ -15,33 +17,78 @@ Page({
         });
     },
     onLoad: function () {
-        var _this = this;
-        if (app.globalData.userInfo) {
-            this.setData({
-                userInfo: app.globalData.userInfo,
-                hasUserInfo: true,
+      request(
+          {url:'http://localhost:8080/api/goodsList',
+            data:{
+                name:'鸭梨'
+            }}).then(res=>{
+                console.log(res);
+            }).catch(err=>{
+                console.log(err);
             });
-        }
-        else if (this.data.canIUse) {
-            app.userInfoReadyCallback = function (res) {
-                _this.setData({
-                    userInfo: res.userInfo,
-                    hasUserInfo: true,
-                });
-            };
-        }
-        else {
-            wx.getUserInfo({
-                success: function (res) {
-                    app.globalData.userInfo = res.userInfo;
-                    _this.setData({
-                        userInfo: res.userInfo,
-                        hasUserInfo: true,
-                    });
-                },
-            });
-        }
     },
+
+    getDataOrigin:function(){
+         //1.使用Get请求
+        // wx.request({
+        //   url: 'http://localhost:8080/api/goodsList',
+        //   data:{
+        //       name:"abc"
+        //   },
+        //   method:"GET",
+        //   success:function(res){
+        //       console.log(res);
+        //   }
+        // })
+
+        //2.使用post请求
+        wx.request({
+            url: 'http://localhost:8080/api/goods',
+            method:"POST",
+            data:{
+              name:"南方黑芝麻糊"
+            },
+            success:function(res){
+                console.log("请求成功 ",res);
+            },
+            fail:function(err){
+                console.log("请求失败 ",err);
+            },
+            complete:function(res){
+                console.log("完成回调 ",res);
+            }
+          })
+    },
+
+    doLogin:function(){
+  // var _this = this;
+        // if (app.globalData.userInfo) {
+        //     this.setData({
+        //         userInfo: app.globalData.userInfo,
+        //         hasUserInfo: true,
+        //     });
+        // }
+        // else if (this.data.canIUse) {
+        //     app.userInfoReadyCallback = function (res) {
+        //         _this.setData({
+        //             userInfo: res.userInfo,
+        //             hasUserInfo: true,
+        //         });
+        //     };
+        // }
+        // else {
+        //     wx.getUserInfo({
+        //         success: function (res) {
+        //             app.globalData.userInfo = res.userInfo;
+        //             _this.setData({
+        //                 userInfo: res.userInfo,
+        //                 hasUserInfo: true,
+        //             });
+        //         },
+        //     });
+        // }
+    },
+
     getUserInfo: function (e) {
         console.log(e);
         app.globalData.userInfo = e.detail.userInfo;
