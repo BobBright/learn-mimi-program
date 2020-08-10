@@ -1,5 +1,23 @@
 <!--index.wxml-->
-<!--1.小程序的数据绑定-->
-<view>Hello {{name}}</view>
-<view>My age {{age}}</view>
+<!-- 1.navigator 跳转 -->
+<navigator url="/pages/detail/detail">跳转到详情页</navigator>
 
+<!-- 2. navigator open-type 属性 -->
+<navigator url="/pages/about/about" open-type="redirect">
+跳转到关于页（redirect）
+</navigator>
+
+<navigator url="/pages/about/about" open-type="switchTab">
+跳转到关于页（switchTab）
+</navigator>
+
+<navigator url="/pages/detail/detail" open-type="reLaunch">
+跳转到关于页（reLanch）
+</navigator>
+
+<!-- 3.页面数据的传递 -->
+<navigator url="/pages/comment/comment?name='christ'&age=18&height='1.88'">跳转到评论页面</navigator>
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行页面跳转 -->
+<button size="mini" bind:tap="handleNavigate">跳转到详情页</button>
